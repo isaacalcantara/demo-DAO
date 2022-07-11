@@ -38,6 +38,13 @@ public class Program {
 		Seller newSeller = new Seller(null, "Teste", "teste@gmail.com", new Date(), 4000.0, department);
 		sellerdao.insert(newSeller);
 		System.out.println("Sucessful insertion, new id = " + newSeller.getId());
+		
+		System.out.println("\n === TESTE 5: seller Update ===");
+		seller = sellerdao.findById(1);
+		seller.setName("Been");
+		sellerdao.update(seller);
+		System.out.println("Sucessful!");
+		
 	}
 
 }
