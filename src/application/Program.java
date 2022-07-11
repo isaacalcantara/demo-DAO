@@ -11,7 +11,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		System.out.println("\n === TESTE 1: seller findbyid ===");
+		System.out.println("\n === TESTE 1: seller FindById ===");
 		
 		SellerDao sellerdao = DaoFactory.createSellerDao();
 		
@@ -26,6 +26,12 @@ public class Program {
 			System.out.println(obj);
 		}
 		
+		
+		System.out.println("\n === TESTE 3: seller findALl ===");		
+		list = sellerdao.findAll();
+		for(Seller obj : list) {
+			System.out.println(obj);
+		}
 	}
 
 }
